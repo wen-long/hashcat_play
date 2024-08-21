@@ -19,13 +19,14 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: macos-latest
-
+    continue-on-error: true
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v4
         
       - name: deps
-        run: brew install minizip xxhash
+        run: brew install minizip xxhash coreutils
         
       - name: baseinfo
         run: pwd; sha256sum 6.2.6_1/share/hashcat/hashcat_bin
