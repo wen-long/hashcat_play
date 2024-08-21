@@ -27,8 +27,15 @@ jobs:
       - name: deps
         run: brew install minizip xxhash
         
-      - name: pwd
-        run: pwd
+      - name: baseinfo
+        run: pwd; sha256sum 6.2.6_1/share/hashcat/hashcat_bin
 
       - name: hashcat
         run: 6.2.6_1/share/hashcat/hashcat_bin  -I
+        
+      - name: hashcat benchmark
+        run: 6.2.6_1/share/hashcat/hashcat_bin  --benchmark -m 0 -D 1,2 -w 2
+        
+      - name: hashcat benchmark --backend-ignore-opencl
+        run: 6.2.6_1/share/hashcat/hashcat_bin  --benchmark -m 0 -D 1,2 -w 2  --backend-ignore-opencl
+
