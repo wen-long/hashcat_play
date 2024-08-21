@@ -29,6 +29,9 @@ jobs:
         
       - name: baseinfo
         run: pwd; sha256sum 6.2.6_1/share/hashcat/hashcat_bin
+     
+      - name: display info
+        run: system_profiler SPDisplaysDataType
 
       - name: hashcat
         run: 6.2.6_1/share/hashcat/hashcat_bin  -I
