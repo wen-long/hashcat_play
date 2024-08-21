@@ -31,6 +31,4 @@ jobs:
         run: pwd
 
       - name: hashcat
-        run: 6.2.6_1/bin/hashcat_bin  -I
-        env:
-          XDG_DATA_HOME: /Users/runner/work/hashcat_play/6.2.6_1/share/hashcat
+        run: 6.2.6_1/share/hashcat/hashcat_bin  -I
