@@ -1,0 +1,133 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "name": "SBOM-SPDX-hashcat-6.2.6",
+  "creationInfo": {
+    "created": "2024-08-21T13:11:11Z",
+    "creators": [
+      "Tool: https://github.com/Homebrew/brew@4.3.17-72-g4362955"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://formulae.brew.sh/spdx/hashcat-6.2.6.json",
+  "documentDescribes": [
+    "SPDXRef-Archive-hashcat-src",
+    "SPDXRef-Package-SPDXRef-minizip-1.3.1",
+    "SPDXRef-Package-SPDXRef-xxhash-0.8.2",
+    "SPDXRef-Compiler"
+  ],
+  "files": [
+
+  ],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Archive-hashcat-src",
+      "name": "hashcat",
+      "versionInfo": "6.2.6",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2022-09-02 14:58:13 UTC",
+      "licenseConcluded": "MIT",
+      "downloadLocation": "https://hashcat.net/files/hashcat-6.2.6.tar.gz",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b25e1077bcf34908cc8f18c1a69a2ec98b047b2cbcf0f51144dcf3ba1e0b7b2a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-minizip-1.3.1",
+      "name": "minizip",
+      "versionInfo": "1.3.1",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "Zlib",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/minizip/blobs/sha256:3bc53490be71be5fcf8c018ba2db9b061dbedf50a12c6f6fabcc9f4df003cfc5",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3bc53490be71be5fcf8c018ba2db9b061dbedf50a12c6f6fabcc9f4df003cfc5"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/minizip@1.3.1",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-xxhash-0.8.2",
+      "name": "xxhash",
+      "versionInfo": "0.8.2",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "BSD-2-Clause and GPL-2.0-or-later",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/xxhash/blobs/sha256:b9b57e7f37df3a4ba3793b60cd61a44c148aa3ee69d138dff6cde7291641c5ae",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b9b57e7f37df3a4ba3793b60cd61a44c148aa3ee69d138dff6cde7291641c5ae"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/xxhash@0.8.2",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Compiler",
+      "name": "clang",
+      "versionInfo": "15.4",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "checksums": [
+
+      ],
+      "externalRefs": [
+
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-minizip-1.3.1",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-hashcat"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-xxhash-0.8.2",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-hashcat"
+    },
+    {
+      "spdxElementId": "SPDXRef-Patch-hashcat-0",
+      "relationshipType": "PATCH_APPLIED",
+      "relatedSpdxElement": "SPDXRef-Archive-hashcat-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-File-hashcat",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-hashcat-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Compiler",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-Package-hashcat-src"
+    }
+  ]
+}
