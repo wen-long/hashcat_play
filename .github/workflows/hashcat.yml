@@ -25,6 +25,6 @@ jobs:
       - uses: actions/checkout@v4
         
       - name: hashcat
-        run: 6.2.6_1/bin/hashcat  -I
+        run: 6.2.6_1/bin/hashcat_bin  -I
         env:
           XDG_DATA_HOME: 6.2.6_1/share
